@@ -1,13 +1,14 @@
 name: Update Blog Posts
-  
 
 on:
   push:
-      branches:
-        - main
+    branches:
+      - main
   schedule:
-    # 테스트를 원한다면, `한국 표준시 = UTC + 9` 참고해서 시간 수정한 후 테스트해보기
-    - cron: '0 0 * * *'  # 매일 자정에 실행, UTC 협정 세계시 기준 (한국 시간 기준 오전 9시)
+    # 매일 자정에 실행, UTC 협정 세계시 기준 (한국 시간 기준 오전 9시)
+    - cron: '0 0 * * *'
+  # 수동 실행도 가능하도록 추가
+  workflow_dispatch:
 
 jobs:
   update_blog:
@@ -15,16 +16,15 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
-
-    - name: Push changes
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git push https://${{ secrets.GH_PAT }}@github.com/youjin-hong/velog.git
+      uses: actions/checkout@v4
+      with:
+        # 전체 히스토리를 가져와서 git 작업이 가능하도록 함
+        fetch-depth: 0
+        # GitHub Actions이 다른 액션을 트리거할 수 있도록 토큰 설정
+        token: ${{ secrets.GH_PAT }}
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: '3.x'
 
@@ -32,5 +32,13 @@ jobs:
       run: |
         pip install feedparser gitpython
 
+    - name: Configure Git
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
     - name: Run script
       run: python scripts/update_blog.py
+
+    # 스크립트 실행 후 변경사항이 있으면 자동으로 푸시됨
+    # (스크립트 내부에서 git push 실행)
