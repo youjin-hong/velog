@@ -1,3 +1,9 @@
+---
+title: setRows 호출방식 변경
+date: Thu, 28 Mar 2024 14:42:45 GMT
+link: https://velog.io/@so356hot/setRows-%ED%98%B8%EC%B6%9C%EB%B0%A9%EC%8B%9D-%EB%B3%80%EA%B2%BD
+---
+
 <p>이수증 신청을 했는데 신청 취소를 할 경우, 이수증 관리 페이지에서 취소하고자 하는 행의 ‘신청 취소’ 버튼을 누르면 해당 행이 삭제가 되어야 하는데, 새로고침을 해야만 삭제가 표시되는 문제가 발생했다. </p>
 <p>그래서 네트워크탭을 열어보니, tableBody에 key={moduleName}으로만 되어있어 같은 모듈명을 가진 행들이 많아서 구분을 못한다는 뜻의 메세지가 담겨있었다. </p>
 <p>그래서 <code>${row.moduleName}-${row.date}</code>로 변경을 해주었으나, 무언가 찝찝했다. date 초단위까지 구분을 하기 때문에 겹칠 일이 없으나 나중에 서비스가 배포된 후에 date가 분 단위로 축소가 되거나 사라질 수도 있기 때문에 map(row, index)를 추가하여 key={<code>${row.moduleName}-${index}</code>}로 바꿔주었다. </p>

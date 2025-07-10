@@ -1,3 +1,9 @@
+---
+title: [JS] this (아직 진행중...)
+date: Mon, 05 Aug 2024 14:37:02 GMT
+link: https://velog.io/@so356hot/this
+---
+
 <p>JavaScript에서 <code>this</code>는 <strong>함수나 메서드가 어떻게 호출되었는지</strong>에 따라 그 값이 결정되는 동적인 특성을 가지고 있다. </p>
 <p>이는 함수의 실행 컨텍스트에 따라 달라지며, 함수가 어떻게 호출되었는지에 따라 <code>this</code> 값이 결정된다. 즉, <code>this</code>는 실행 시점에 결정되며, 선언 시점에서는 그 값을 알 수 없다.</p>
 <p>호출 시 <code>this</code>가 결정된다는 것을 <strong>동적으로 바인딩되었다</strong>고 한다. 따라서 함수 정의가 어떻게 되었는지보다 누가 어떻게 호출했는지에 유의해야 한다. 자바스크립트의 함수는 호출될 때, 매개변수로 전달되는 인자값 외에 <code>arguments</code> 객체와 <code>this</code>를 암묵적으로 전달받는다.</p>

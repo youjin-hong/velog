@@ -1,3 +1,9 @@
+---
+title: 쿠키와 세션, Bearer과 JWT 이해하기
+date: Fri, 01 Nov 2024 03:07:57 GMT
+link: https://velog.io/@so356hot/%EC%BF%A0%ED%82%A4%EC%99%80-%EC%84%B8%EC%85%98-Bearer%EA%B3%BC-JWT-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0
+---
+
 <h2 id="들어가기-전에">들어가기 전에…</h2>
 <h3 id="인증과-인가-authentication-vs-authorization">인증과 인가 (Authentication vs Authorization)</h3>
 <p><strong>인증(Authentication)</strong>은 사용자가 “누구인지” 확인하는 과정이다. 웹 애플리케이션에서는 일반적으로 사용자 이름(아이디)와 비밀번호를 입력하여 로그인하는 과정에서 이뤄진다. 이러한 신원을 확인하는 것은 해당 웹의 시스템에 접근하기 위해서는 필수적이다. </p>

@@ -1,3 +1,9 @@
+---
+title: react 특성에 따른 Link 컴포넌트
+date: Thu, 28 Mar 2024 14:36:01 GMT
+link: https://velog.io/@so356hot/%EC%95%8C%EA%B2%8C%EB%90%9C-%EC%A0%90
+---
+
 <ul>
 <li>리액트에서는 a태그를 이용한 href 대신 Link 컴포넌트를 사용해야 한다. 
 → 상태값을 잃고 속도가 저하되기 때문이다. </li>
