@@ -30,7 +30,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install feedparser gitpython
+          pip install feedparser gitpython pyyaml
 
       - name: Configure Git
         run: |
