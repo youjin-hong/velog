@@ -15,30 +15,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-        # 전체 히스토리를 가져와서 git 작업이 가능하도록 함
-        fetch-depth: 0
-        # GitHub Actions이 다른 액션을 트리거할 수 있도록 토큰 설정
-        token: ${{ secrets.GH_PAT }}
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # 전체 히스토리를 가져와서 git 작업이 가능하도록 함
+          fetch-depth: 0
+          # GitHub Actions이 다른 액션을 트리거할 수 있도록 토큰 설정
+          token: ${{ secrets.GH_PAT }}
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
 
-    - name: Install dependencies
-      run: |
-        pip install feedparser gitpython
+      - name: Install dependencies
+        run: |
+          pip install feedparser gitpython
 
-    - name: Configure Git
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+      - name: Configure Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
-    - name: Run script
-      run: python scripts/update_blog.py
+      - name: Run script
+        run: python scripts/update_blog.py
 
     # 스크립트 실행 후 변경사항이 있으면 자동으로 푸시됨
     # (스크립트 내부에서 git push 실행)
