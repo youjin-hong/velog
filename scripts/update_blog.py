@@ -3,6 +3,7 @@ import git
 import os
 import re
 from datetime import datetime
+import yaml
 
 # 벨로그 RSS 피드 URL
 rss_url = 'https://api.velog.io/rss/@so356hot'
@@ -35,6 +36,19 @@ def sanitize_filename(filename):
     
     return filename
 
+def escape_yaml_string(text):
+    """YAML에서 안전한 문자열로 변환"""
+    if not text:
+        return '""'
+    
+    # 특수 문자가 있으면 따옴표로 감싸기
+    if any(char in text for char in [':', '"', "'", '\n', '\r', '\\', '[', ']', '{', '}', '|', '>', '#']):
+        # 내부 따옴표 이스케이프
+        escaped = text.replace('"', '\\"')
+        return f'"{escaped}"'
+    
+    return text
+
 try:
     # 레포지토리 로드
     repo = git.Repo(repo_path)
@@ -58,11 +72,16 @@ try:
         file_name = sanitize_filename(entry.title) + '.md'
         file_path = os.path.join(posts_dir, file_name)
         
+        # YAML front matter를 안전하게 생성
+        title = escape_yaml_string(entry.title)
+        date_str = entry.published if hasattr(entry, 'published') else datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        link = escape_yaml_string(entry.link)
+        
         # 새 콘텐츠 생성
         new_content = f"""---
-title: {entry.title}
-date: {entry.published if hasattr(entry, 'published') else datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
-link: {entry.link}
+title: {title}
+date: {date_str}
+link: {link}
 ---
 
 {entry.description}
