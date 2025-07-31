@@ -1,10 +1,9 @@
 ---
-title: 얕은 복사 (Shallow Copy), 깊은 복사 (Deep Copy) [Javascript]
-date: Tue, 30 Jul 2024 08:26:55 GMT
-link: https://velog.io/@so356hot/JS-%EC%96%95%EC%9D%80-%EB%B3%B5%EC%82%AC-Shallow-Copy-%EA%B9%8A%EC%9D%80-%EB%B3%B5%EC%82%AC-Deep-Copy
----
-
-<h3 id="javascript-변수-타입"><strong>[javascript 변수 타입]</strong></h3>
+        title: "얕은 복사 (Shallow Copy), 깊은 복사 (Deep Copy) [Javascript]
+        date: Tue, 30 Jul 2024 08:26:55 GMT
+        link: https://velog.io/@so356hot/JS-%EC%96%95%EC%9D%80-%EB%B3%B5%EC%82%AC-Shallow-Copy-%EA%B9%8A%EC%9D%80-%EB%B3%B5%EC%82%AC-Deep-Copy
+        ---
+        <h3 id="javascript-변수-타입"><strong>[javascript 변수 타입]</strong></h3>
 <ul>
 <li><strong>원시 타입 (Primitive type]</strong></li>
 </ul>
@@ -150,3 +149,4 @@ console.log(deepDeepCopy);   // [10, 2, {a: 100}]</code></pre>
 <p><a href="https://ko.javascript.info/object-copy">https://ko.javascript.info/object-copy</a></p>
 <p><a href="https://developer.mozilla.org/ko/docs/Glossary/Shallow_copy">https://developer.mozilla.org/ko/docs/Glossary/Shallow_copy</a></p>
 </blockquote>
+        

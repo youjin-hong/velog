@@ -1,10 +1,9 @@
 ---
-title: MSW 공식문서 번역하기
-date: Wed, 05 Jun 2024 17:10:35 GMT
-link: https://velog.io/@so356hot/MSW-%EA%B3%B5%EC%8B%9D%EB%AC%B8%EC%84%9C-%EB%B2%88%EC%97%AD%ED%95%98%EA%B8%B0
----
-
-<h1 id="공식문서-번역하기">공식문서 번역하기</h1>
+        title: "MSW 공식문서 번역하기
+        date: Wed, 05 Jun 2024 17:10:35 GMT
+        link: https://velog.io/@so356hot/MSW-%EA%B3%B5%EC%8B%9D%EB%AC%B8%EC%84%9C-%EB%B2%88%EC%97%AD%ED%95%98%EA%B8%B0
+        ---
+        <h1 id="공식문서-번역하기">공식문서 번역하기</h1>
 <p><a href="https://mswjs.io/docs/getting-started">https://mswjs.io/docs/getting-started</a></p>
 <p>MSW (Mock Service Worker)은 API 요청을 가로채고 모킹(Mocking)할 수 있는 도구이다.
 일반적으로 개발 환경에서 사용되며, 로컬 개발 환경에서 mocking된 API 응답을 제공하여
@@ -135,3 +134,4 @@ app();</code></pre>
 <li><strong>MSW<a href="https://discord.com/invite/z29WbnfDC5">디스코드</a></strong></li>
 <li><a href="https://github.com/mswjs/msw/discussions"><strong>GITHUB</strong></a><strong>에서 토론하기</strong></li>
 </ul>
+        

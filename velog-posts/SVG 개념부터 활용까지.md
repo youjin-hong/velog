@@ -1,10 +1,9 @@
 ---
-title: SVG 개념부터 활용까지
-date: Fri, 06 Sep 2024 08:17:51 GMT
-link: https://velog.io/@so356hot/SVG-%EA%B0%9C%EB%85%90%EB%B6%80%ED%84%B0-%ED%99%9C%EC%9A%A9%EA%B9%8C%EC%A7%80
----
-
-<h3 id="span-stylebackground-color-fff5b1svg-중요성-써야-하는-이유-래스터-파일의-한계-보완span"><span style="background-color: #fff5b1;">SVG 중요성: 써야 하는 이유, 래스터 파일의 한계 보완</span></h3>
+        title: "SVG 개념부터 활용까지
+        date: Fri, 06 Sep 2024 08:17:51 GMT
+        link: https://velog.io/@so356hot/SVG-%EA%B0%9C%EB%85%90%EB%B6%80%ED%84%B0-%ED%99%9C%EC%9A%A9%EA%B9%8C%EC%A7%80
+        ---
+        <h3 id="span-stylebackground-color-fff5b1svg-중요성-써야-하는-이유-래스터-파일의-한계-보완span"><span style="background-color: #fff5b1;">SVG 중요성: 써야 하는 이유, 래스터 파일의 한계 보완</span></h3>
 <p>이미지 관리는 웹 성능을 결정 짓는 리소스 관리의 중요한 사항 중 하나라고 한다. 이에 svg가 많이 쓰인다고 한다.</p>
 <p><code>svg</code>는 <code>png</code>, <code>jpg</code>보다 상대적으로 사용하기 전에 학습도 필요하기 때문에 쓰기가 꺼려질 수도 있으나,  <code>png</code>, <code>jpg</code> 같은 래스터 기반 포맷보다 이미지를 리사이징해도 깨지지 않는다는 장점과, 상대적으로 적은 용량으로 사용할 수 있다는 점, 애니메이션 추가가 가능하다는 점 등 다양한 장점을 갖고 있어 웹 개발에 자주 사용되는 <code>svg</code> 를 활용하는 다양한 방법에 대해 알아보고자 한다.</p>
 <p>우선, <code>svg</code>의 주요 특징에 대해 살펴보자.</p>
@@ -310,3 +309,4 @@ svg에서 사용할 수 있는 가장 일반적인 형태.
 <pre><code class="language-html">    &lt;object data=&quot;image.svg&quot; width=&quot;300&quot; height=&quot;300&quot;&gt;&lt;/object&gt;</code></pre>
 <p>이미지의 내부 조작이 크게 필요하지 않은 경우에는 <code>&lt;img&gt;</code>, <code>backgroud-image</code>를 사용하고, 
 보다 복잡한 조작이 필요한 경우에는 <code>inline</code>, <code>&lt;object&gt;</code>를 이용하는 것이 좋다.</p>
+        

@@ -1,10 +1,9 @@
 ---
-title: 쿠키와 세션, Bearer과 JWT 이해하기
-date: Fri, 01 Nov 2024 03:07:57 GMT
-link: https://velog.io/@so356hot/%EC%BF%A0%ED%82%A4%EC%99%80-%EC%84%B8%EC%85%98-Bearer%EA%B3%BC-JWT-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0
----
-
-<h2 id="들어가기-전에">들어가기 전에…</h2>
+        title: "쿠키와 세션, Bearer과 JWT 이해하기
+        date: Fri, 01 Nov 2024 03:07:57 GMT
+        link: https://velog.io/@so356hot/%EC%BF%A0%ED%82%A4%EC%99%80-%EC%84%B8%EC%85%98-Bearer%EA%B3%BC-JWT-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0
+        ---
+        <h2 id="들어가기-전에">들어가기 전에…</h2>
 <h3 id="인증과-인가-authentication-vs-authorization">인증과 인가 (Authentication vs Authorization)</h3>
 <p><strong>인증(Authentication)</strong>은 사용자가 “누구인지” 확인하는 과정이다. 웹 애플리케이션에서는 일반적으로 사용자 이름(아이디)와 비밀번호를 입력하여 로그인하는 과정에서 이뤄진다. 이러한 신원을 확인하는 것은 해당 웹의 시스템에 접근하기 위해서는 필수적이다. </p>
 <p><strong>인가(Authorization)</strong>는 신원 인증이 완료된 사용자에게 특정 자원에 대한 접근 권한을 부여하는 과정이다. 이 과정은 사용자가 해당 시스템 내에서 수행할 수 있는 작업을 결정한다. 왜냐하면 사용자마다 접근할 수 있는 자원과 수행할 수 있는 일이 다를 수 있기 때문에 인가는 보안 유지와 권한 관리에 중요한 역할을 한다. </p>
@@ -298,3 +297,4 @@ JWT는 만료 시간이 설정되어 있으므로, 클라이언트는 주기적�
 <p><a href="https://f-lab.kr/insight/cookie-vs-session">https://f-lab.kr/insight/cookie-vs-session</a></p>
 <p><a href="https://jwt.io/">https://jwt.io/</a></p>
 <p><a href="https://ko.javascript.info/cookie">https://ko.javascript.info/cookie</a></p>
+        
