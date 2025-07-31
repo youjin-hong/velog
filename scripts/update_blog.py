@@ -18,20 +18,14 @@ if not os.path.exists(posts_dir):
     os.makedirs(posts_dir)
 
 def sanitize_filename(filename):
-    """파일명에서 유효하지 않은 문자를 제거하거나 대체"""
     invalid_chars = r'[<>:"/\\|?*]'
     filename = re.sub(invalid_chars, '-', filename)
     filename = re.sub(r'-+', '-', filename)
     filename = filename.strip(' -')
-    if len(filename) > 250:
-        filename = filename[:250]
-    return filename
+    return filename[:250]
 
 try:
-    # 레포지토리 로드
     repo = git.Repo(repo_path)
-
-    # RSS 피드 파싱
     print("RSS 피드를 가져오는 중...")
     feed = feedparser.parse(rss_url)
 
@@ -42,19 +36,17 @@ try:
     print(f"{len(feed.entries)}개의 글을 찾았습니다.")
     changed_posts = []
 
-    # 각 글을 파일로 저장하고 커밋
     for entry in feed.entries:
         file_name = sanitize_filename(entry.title) + '.md'
         file_path = os.path.join(posts_dir, file_name)
 
-        # description이 없을 수 있으므로 getattr 사용
-    published_date = (
-        entry.published
-        if hasattr(entry, 'published')
-        else datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    )
+        published_date = (
+            entry.published
+            if hasattr(entry, 'published')
+            else datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        )
 
-new_content = f"""# 📌 Velog 글 요약
+        new_content = f"""# 📌 Velog 글 요약
 
 | 항목   | 내용 |
 |--------|------|
@@ -67,7 +59,6 @@ new_content = f"""# 📌 Velog 글 요약
 {getattr(entry, 'description', '').strip()}
 """
 
-        
         should_update = False
 
         if not os.path.exists(file_path):
