@@ -49,14 +49,13 @@ try:
 
         # description이 없을 수 있으므로 getattr 사용
         new_content = f"""---
-title: {entry.title}
-date: {entry.published if hasattr(entry, 'published') else datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
-link: {entry.link}
----
-
-{getattr(entry, 'description', '')}
-"""
-
+        title: "{entry.title.replace('"', "'")}
+        date: {entry.published if hasattr(entry, 'published') else datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+        link: {entry.link}
+        ---
+        {getattr(entry, 'description', '')}
+        """
+        
         should_update = False
 
         if not os.path.exists(file_path):
