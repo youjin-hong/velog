@@ -48,13 +48,25 @@ try:
         file_path = os.path.join(posts_dir, file_name)
 
         # description이 없을 수 있으므로 getattr 사용
-        new_content = f"""---
-        title: "{entry.title.replace('"', "'")}
-        date: {entry.published if hasattr(entry, 'published') else datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
-        link: {entry.link}
-        ---
-        {getattr(entry, 'description', '')}
-        """
+    published_date = (
+        entry.published
+        if hasattr(entry, 'published')
+        else datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    )
+
+new_content = f"""# 📌 Velog 글 요약
+
+| 항목   | 내용 |
+|--------|------|
+| **제목** | {entry.title.replace('|', '\\|')} |
+| **날짜** | {published_date} |
+| **링크** | [{entry.link}]({entry.link}) |
+
+---
+
+{getattr(entry, 'description', '').strip()}
+"""
+
         
         should_update = False
 
