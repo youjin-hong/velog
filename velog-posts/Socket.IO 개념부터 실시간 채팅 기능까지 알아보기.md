@@ -1,9 +1,14 @@
+# 📌 Velog 글 요약
+
+| 항목   | 내용 |
+|--------|------|
+| **제목** | Socket.IO 개념부터 실시간 채팅 기능까지 알아보기 |
+| **날짜** | Thu, 07 Nov 2024 08:03:26 GMT |
+| **링크** | [https://velog.io/@so356hot/Socket.IO-%EA%B0%9C%EB%85%90%EB%B6%80%ED%84%B0-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%B1%84%ED%8C%85-%EA%B8%B0%EB%8A%A5%EA%B9%8C%EC%A7%80-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0](https://velog.io/@so356hot/Socket.IO-%EA%B0%9C%EB%85%90%EB%B6%80%ED%84%B0-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%B1%84%ED%8C%85-%EA%B8%B0%EB%8A%A5%EA%B9%8C%EC%A7%80-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0) |
+
 ---
-        title: "Socket.IO 개념부터 실시간 채팅 기능까지 알아보기
-        date: Thu, 07 Nov 2024 08:03:26 GMT
-        link: https://velog.io/@so356hot/Socket.IO-%EA%B0%9C%EB%85%90%EB%B6%80%ED%84%B0-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%B1%84%ED%8C%85-%EA%B8%B0%EB%8A%A5%EA%B9%8C%EC%A7%80-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0
-        ---
-        <h3 id="socket을-사용하게-된-배경">socket을 사용하게 된 배경</h3>
+
+<h3 id="socket을-사용하게-된-배경">socket을 사용하게 된 배경</h3>
 <p><img alt="" src="https://velog.velcdn.com/images/so356hot/post/178f5f0e-bdca-49b0-96b9-92811364b4cf/image.png" /></p>
 <p>이번에 Socket.IO를 이용해 각 post 글마다 실시간 채팅 댓글(예를 들면 예전에 있었던 네이버 실시간 댓글..?)을 구현하게 되어 공부하게 되었다. </p>
 <p>우선 Socket.IO에 대해 들어가기 전에 소켓이라는 것이 왜 등장하게 된건지부터 알아보면 좋을 것 같아서 기존의 HTTP 방식과 웹소켓을 비교하며, 실시간 데이터 전달의 필요성과 해결 방안부터 살펴보자.</p>
@@ -618,4 +623,3 @@ module.exports = Comment;</code></pre>
 <hr />
 <h3 id="참고-자료">참고 자료</h3>
 <p><a href="https://socket.io/docs/v4/tutorial/step-4">https://socket.io/docs/v4/tutorial/step-4</a></p>
-        

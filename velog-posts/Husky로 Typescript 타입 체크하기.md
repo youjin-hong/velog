@@ -1,9 +1,14 @@
+# 📌 Velog 글 요약
+
+| 항목   | 내용 |
+|--------|------|
+| **제목** | Husky로 Typescript 타입 체크하기 |
+| **날짜** | Wed, 09 Jul 2025 14:55:39 GMT |
+| **링크** | [https://velog.io/@so356hot/Husky%EB%A1%9C-Typescript-%ED%83%80%EC%9E%85-%EC%B2%B4%ED%81%AC%ED%95%98%EA%B8%B0](https://velog.io/@so356hot/Husky%EB%A1%9C-Typescript-%ED%83%80%EC%9E%85-%EC%B2%B4%ED%81%AC%ED%95%98%EA%B8%B0) |
+
 ---
-        title: "Husky로 Typescript 타입 체크하기
-        date: Wed, 09 Jul 2025 14:55:39 GMT
-        link: https://velog.io/@so356hot/Husky%EB%A1%9C-Typescript-%ED%83%80%EC%9E%85-%EC%B2%B4%ED%81%AC%ED%95%98%EA%B8%B0
-        ---
-        <blockquote>
+
+<blockquote>
 <p><em>배포 실패율 30% → 5%로 줄인 실전 경험</em></p>
 </blockquote>
 <h3 id="🚨-이런-상황-경험해보셨나요">🚨 이런 상황, 경험해보셨나요?</h3>
@@ -244,4 +249,3 @@ issue 생성 → feature branch 작업 → PR 생성 → approve 대기 → merg
 <p>다른 블로그들을 보니 commit 메세지 설정을 많이 하던데 이것도 한 번 적용해보면 좋을 것 같고 다른 어떤 설정들을 많이 쓰는지, 우리 프로젝트에 뭐를 적용하면 개발이 더 편리해질 지 고민해보면 좋을 것 같다는 생각을 했습니다. </p>
 <p><strong>참고 자료</strong></p>
 <p><a href="https://typicode.github.io/husky/get-started.html">Husky 공식 문서</a></p>
-        
